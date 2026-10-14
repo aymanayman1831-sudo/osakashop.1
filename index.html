@@ -166,9 +166,9 @@ body.admin-mode>header,body.admin-mode>main,body.admin-mode>footer{display:none}
 .mut{color:#94a3b8}.gr{color:#34d399;font-weight:700}
 .stsel{background:transparent;border:1px solid;border-radius:8px;padding:4px 8px;font:600 .78rem var(--body)}
 .stsel option{background:#111827;color:#e2e8f0}
-.st-pending{color:#fcd34d;border-color:rgba(245,158,11,.4)}.st-ready_delivery{color:#7dd3fc;border-color:rgba(14,165,233,.4)}
-.st-ready_shipping{color:#c4b5fd;border-color:rgba(139,92,246,.4)}.st-delivered{color:#34d399;border-color:rgba(16,185,129,.45)}
-.st-cancelled{color:#f87171;border-color:rgba(239,68,68,.4)}.st-returned{color:#fdba74;border-color:rgba(249,115,22,.4)}
+.st-pending{color:#fcd34d;border-color:rgba(245,158,11,.4)}.st-ready{color:#7dd3fc;border-color:rgba(14,165,233,.4)}
+.st-shipready{color:#c4b5fd;border-color:rgba(139,92,246,.4)}.st-delivered{color:#34d399;border-color:rgba(16,185,129,.45)}
+.st-canceled{color:#f87171;border-color:rgba(239,68,68,.4)}.st-returned{color:#fdba74;border-color:rgba(249,115,22,.4)}
 .abig{padding:24px;margin-bottom:16px;background:linear-gradient(135deg,rgba(37,99,235,.2),var(--p));border-color:rgba(37,99,235,.4)}
 .bign{font:800 2.4rem var(--body);color:#fff;margin:6px 0 2px}
 .agrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
@@ -288,7 +288,6 @@ body.admin-mode>header,body.admin-mode>main,body.admin-mode>footer{display:none}
    </dl>
    <div class="soc">
     <a class="btn ghost" href="https://instagram.com/osakashop" target="_blank" rel="noopener">Instagram</a>
-    <a class="btn ghost" id="wa-link" href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
    </div>
   </div>
   <div class="map"><p data-i18n="c_map"></p></div>
@@ -311,7 +310,7 @@ p5:"Ciseaux de coupe 6\"",p5d:"Acier affûté, poignée ergonomique, coupe douce
 p7:"Huile à barbe",p7d:"Nourrit la barbe et adoucit la peau, parfum boisé.",p8:"Baume à barbe",p8d:"Discipline et hydrate la barbe, tenue souple.",
 a_title:"Pourquoi OSAKASHOP",a1:"Qualité professionnelle",a1d:"Du matériel testé par des barbiers, choisi pour un usage quotidien en salon.",a2:"Livraison rapide",a2d:"Livraison express à Casablanca et expédition partout au Maroc.",
 sum_t:"Votre panier",sum_tot:"Total estimé",
-f_name:"Nom et prénom",f_city:"Ville",other:"Autre ville",city_ph:"Saisissez le nom de votre ville",f_phone:"Téléphone",f_addr:"Adresse exacte de livraison",f_note:"Commentaire",f_note_ph:"Référence du produit, quantité…",f_send:"Envoyer la commande",f_ok:"Commande prête : WhatsApp s'ouvre pour l'envoyer à la boutique.",
+f_name:"Nom et prénom",f_city:"Ville",other:"Autre ville",city_ph:"Saisissez le nom de votre ville",f_phone:"Téléphone",f_addr:"Adresse exacte de livraison",f_note:"Commentaire",f_note_ph:"Référence du produit, quantité…",f_send:"Envoyer la commande",f_ok:"Commande envoyée.",
 e_req:"Ce champ est obligatoire.",e_tel:"Entrez un numéro marocain valide, par exemple 6 12 34 56 78.",
 c_title:"Nous trouver",c_addr:"Adresse",c_addr_v:"Rue exemple, Derb Omar, Casablanca",c_hours:"Horaires",c_h1:"Lun – Sam : 9h30 – 19h30",c_h2:"Dimanche : fermé",c_tel:"Téléphone",c_map:"Carte Google Maps : ajoutez l'iframe de votre adresse ici."},
 ar:{n_prod:"المنتجات",n_why:"المزايا",n_order:"اطلب الآن",n_contact:"اتصل بنا",cart:"السلة",
@@ -324,7 +323,7 @@ p5:"مقص قص 6 إنش",p5d:"فولاذ حاد ومقبض مريح وقص نا
 p7:"زيت اللحية",p7d:"يغذي اللحية ويلطف البشرة برائحة خشبية.",p8:"بلسم اللحية",p8d:"يرطب اللحية ويمنحها تثبيتًا مرنًا.",
 a_title:"لماذا OSAKASHOP",a1:"جودة احترافية",a1d:"معدات جرّبها حلاقون ومختارة للاستعمال اليومي في الصالون.",a2:"توصيل سريع",a2d:"توصيل سريع في الدار البيضاء وشحن إلى كل المغرب.",
 sum_t:"سلتك",sum_tot:"المجموع التقديري",
-f_name:"الاسم الكامل",f_city:"المدينة",other:"مدينة أخرى",city_ph:"اكتب اسم مدينتك",f_phone:"الهاتف",f_addr:"عنوان التوصيل بالتفصيل",f_note:"ملاحظات",f_note_ph:"مرجع المنتج، الكمية…",f_send:"إرسال الطلب",f_ok:"الطلب جاهز: سيفتح واتساب لإرساله إلى المتجر.",
+f_name:"الاسم الكامل",f_city:"المدينة",other:"مدينة أخرى",city_ph:"اكتب اسم مدينتك",f_phone:"الهاتف",f_addr:"عنوان التوصيل بالتفصيل",f_note:"ملاحظات",f_note_ph:"مرجع المنتج، الكمية…",f_send:"إرسال الطلب",f_ok:"تم إرسال الطلب.",
 e_req:"هذا الحقل إجباري.",e_tel:"أدخل رقمًا مغربيًا صحيحًا، مثل 6 12 34 56 78.",
 c_title:"موقعنا",c_addr:"العنوان",c_addr_v:"شارع المثال، درب عمر، الدار البيضاء",c_hours:"أوقات العمل",c_h1:"الاثنين – السبت: 09:30 – 19:30",c_h2:"الأحد: مغلق",c_tel:"الهاتف",c_map:"خريطة Google Maps: أضف هنا iframe الخاص بعنوانك."}
 };
@@ -336,9 +335,8 @@ const ICONS={
  5:'<rect x="42" y="38" width="36" height="68" rx="8" fill="#2a2725" stroke="#c0965a" stroke-width="3"/><rect x="50" y="20" width="20" height="18" fill="#e60012"/><rect x="48" y="58" width="24" height="22" fill="#f2eee6" opacity=".9"/>'
 };
 // ===================== CONFIG SUPABASE =====================
-// Renseignez ces deux valeurs (Supabase > Project Settings > API) pour activer
-// l'enregistrement des commandes, les produits dynamiques et le tableau de bord admin.
-// Le tableau de bord s'ouvre avec  votre-site.com/boutique.html#admin
+// Exécutez d'abord supabase-setup.sql dans Supabase (SQL Editor).
+// Le tableau de bord s'ouvre avec  votre-site.com/index.html#admin
 const SUPABASE_URL = 'https://qhwxjudlwyfckjigwgsm.supabase.co';   // ex. https://xxxx.supabase.co
 const SUPABASE_KEY = 'sb_publishable_1ug8pX_7wEJqg3aP8c1Pyw_ExF6KUSg';   // clé « anon public »
 const sb = (SUPABASE_URL && SUPABASE_KEY && window.supabase) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
@@ -346,22 +344,27 @@ const sb = (SUPABASE_URL && SUPABASE_KEY && window.supabase) ? window.supabase.c
 const $=s=>document.querySelector(s),t=k=>T[lang][k];
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number(n).toLocaleString(lang==='ar'?'ar-MA':'fr-FR');
-Object.assign(T.fr,{deliv:'Livraison',ok_saved:"Commande enregistrée. WhatsApp s'ouvre pour la confirmer.",e_save:"Enregistrement impossible : envoyez la commande par WhatsApp."});
-Object.assign(T.ar,{deliv:'التوصيل',ok_saved:'تم تسجيل الطلب. سيفتح واتساب لتأكيده.',e_save:'تعذر التسجيل: أرسل الطلب عبر واتساب.'});
+Object.assign(T.fr,{deliv:'Livraison',ok_saved:"Commande enregistrée. Numéro :",e_save:"Enregistrement impossible. Réessayez dans un instant.",e_cart:"Ajoutez au moins un produit au panier avant d'envoyer la commande."});
+Object.assign(T.ar,{deliv:'التوصيل',ok_saved:'تم تسجيل الطلب. رقم الطلب:',e_save:'تعذر التسجيل. أعد المحاولة بعد قليل.',e_cart:'أضف منتجًا واحدًا على الأقل إلى السلة قبل إرسال الطلب.'});
 
 // ===================== BOUTIQUE =====================
 const DEMO=[{c:1,i:1,n:1450},{c:1,i:2,n:690},{c:2,i:3,n:380},{c:2,i:5,n:150},{c:3,i:4,n:950},{c:3,i:4,n:720},{c:4,i:5,n:110},{c:4,i:5,n:95}];
 let DB=null,settings={},lang=localStorage.getItem('os-lang')||'fr',cat='',cart={};
-const waNum=()=>String(settings.whatsapp_number||'').replace(/\D/g,'')||'212600000000';
+const CL={fr:{clippers:'Tondeuses pro',razors:'Rasoirs et lames',scissors:'Ciseaux de coupe',care:'Produits barbe',hygiene:'Hygiène',accessories:'Accessoires'},
+ ar:{clippers:'ماكينات احترافية',razors:'مواسي وشفرات',scissors:'مقصات القص',care:'منتجات اللحية',hygiene:'النظافة والتعقيم',accessories:'إكسسوارات'}};
+const DC={1:'clippers',2:'razors',3:'scissors',4:'care'};
+const catLabel=c=>(CL[lang]&&CL[lang][c])||c||'';
+const parseSettings=rows=>{const m={};(rows||[]).forEach(r=>m[r.key]=r.value);return {delivery_fee:Number(m.delivery_price)||0}};
+const itemsTxt=r=>(Array.isArray(r.items)?r.items:[]).map(i=>`${i.qty}× ${(lang==='ar'?i.name_ar:i.name_fr)||''}`).join(', ');
 
 // Produits : base Supabase s'il y en a (sinon les 8 produits de démonstration)
 function catalog(){
- if(DB&&DB.length)return DB.map(r=>({id:String(r.id),name:r.name,desc:'',price:Number(r.price),img:r.image_url,cat:r.category||'',icon:1}));
- return DEMO.map((p,x)=>({id:'d'+x,name:t('p'+(x+1)),desc:t('p'+(x+1)+'d'),price:p.n,img:null,cat:t('c'+p.c),icon:p.i}));
+ if(DB&&DB.length)return DB.map(r=>({id:String(r.id),name:lang==='ar'?(r.name_ar||r.name_fr):(r.name_fr||r.name_ar),desc:'',price:Number(r.price),img:r.image_url,cat:r.category||'',icon:1}));
+ return DEMO.map((p,x)=>({id:'d'+x,name:t('p'+(x+1)),desc:t('p'+(x+1)+'d'),price:p.n,img:null,cat:DC[p.c],icon:p.i}));
 }
 function renderCats(){
  const cs=[...new Set(catalog().map(p=>p.cat).filter(Boolean))];
- $('#cats').innerHTML=`<button data-c="" aria-pressed="${cat===''}">${t('all')}</button>`+cs.map(c=>`<button data-c="${esc(c)}" aria-pressed="${cat===c}">${esc(c)}</button>`).join('');
+ $('#cats').innerHTML=`<button data-c="" aria-pressed="${cat===''}">${t('all')}</button>`+cs.map(c=>`<button data-c="${esc(c)}" aria-pressed="${cat===c}">${esc(catLabel(c))}</button>`).join('');
 }
 function renderProds(){
  $('#prods').innerHTML=catalog().filter(p=>!cat||p.cat===cat).map(p=>`
@@ -378,16 +381,15 @@ function renderSum(){
  $('#sum').innerHTML=`<strong>${t('sum_t')}</strong><ul>${ids.map(k=>`<li><span>${cart[k].q} × ${esc(cart[k].name)}</span><span>${fmt(cart[k].q*cart[k].price)} DH <button data-rm="${esc(k)}" aria-label="−">✕</button></span></li>`).join('')}${fee?`<li><span>${t('deliv')}</span><span>${fmt(fee)} DH</span></li>`:''}</ul><div class="tot"><span>${t('sum_tot')}</span><span>${fmt(sub+fee)} DH</span></div>`;
 }
 function applyStoreSettings(){
- const l=document.getElementById('wa-link');if(l)l.href='https://wa.me/'+waNum();
  renderSum();
 }
 async function loadStore(){
  if(!sb)return;
  const [p,s]=await Promise.all([
-  sb.from('products').select('*').eq('is_visible',true).order('created_at',{ascending:false}),
-  sb.from('settings').select('*').eq('id',1).maybeSingle()]);
+  sb.from('products').select('*').eq('visible',true).order('created_at',{ascending:false}),
+  sb.from('settings').select('*')]);
  if(!p.error)DB=p.data;
- if(s.data)settings=s.data;
+ if(s.data)settings=parseSettings(s.data);
  cat='';renderCats();renderProds();applyStoreSettings();
 }
 function setLang(l){
@@ -432,49 +434,46 @@ form.onsubmit=async ev=>{
  const telOk=/^[5-7]\d{8}$/.test(tel);err('tel',telOk?'':'e_tel');if(!telOk)ok=false;
  if(!ok)return;
  const g=id=>$('#'+id).value.trim();
- const ids=Object.keys(cart),fee=ids.length?(Number(settings.delivery_fee)||0):0;
- const total=ids.reduce((s,k)=>s+cart[k].q*cart[k].price,0)+fee;
- const items=ids.length?ids.map(k=>`- ${cart[k].q} x ${cart[k].name} (${cart[k].price} DH)`).join('\n')+(fee?`\nLivraison: ${fee} DH`:'')+`\nTotal: ${total} DH`:'';
- const msg=`OSAKASHOP – Commande\nNom: ${g('nom')}\nVille: ${cityVal()}\nTél: +212${tel}\nAdresse: ${g('adr')}\nProduits:\n${items||'-'}\nNote: ${g('note')||'-'}`;
- // WhatsApp s'ouvre tout de suite (évite le blocage des pop-ups), puis la commande est enregistrée
- window.open('https://wa.me/'+waNum()+'?text='+encodeURIComponent(msg),'_blank','noopener');
- let saved=false;
- if(sb){
-  const {error}=await sb.from('orders').insert({customer_name:g('nom'),phone:'+212'+tel,city:cityVal(),address:g('adr'),total_amount:total,status:'pending',notes:[items,g('note')].filter(Boolean).join('\n')||null});
-  saved=!error;if(error)console.error(error);
- }
- const okEl=$('#ok');okEl.style.display='block';okEl.textContent=t(saved?'ok_saved':(sb?'e_save':'f_ok'));
- if(saved){cart={};renderSum();form.reset();syncCity()}
+ const okEl=$('#ok');okEl.style.display='block';
+ const ids=Object.keys(cart);
+ if(!ids.length){okEl.textContent=t('e_cart');return}
+ if(!sb){okEl.textContent=t('e_save');return}
+ const btn=form.querySelector('button[type=submit]');btn.disabled=true;
+ const {data,error}=await sb.rpc('place_order',{p_name:g('nom'),p_phone:'+212'+tel,p_city:cityVal(),p_address:g('adr'),p_note:g('note')||null,p_seller:null,p_items:ids.map(k=>({id:k,qty:cart[k].q})),p_lang:lang});
+ btn.disabled=false;
+ if(error){console.error(error);okEl.textContent=t('e_save');return}
+ okEl.textContent=t('ok_saved')+(data&&data.order_no?' '+data.order_no:'');
+ cart={};renderSum();form.reset();syncCity();
 };
 
 // ===================== ADMIN DASHBOARD =====================
 const AD={
 fr:{orders:'Commandes',payouts:'Reversements du livreur',products:'Produits',settings:'Paramètres',admin_dashboard:'Admin Dashboard',live:'En direct',back_store:'Retour au magasin',logout:'Déconnexion',
-all:'Tous',st_pending:'En attente',st_ready_delivery:'Prêt pour livraison',st_ready_shipping:'Prêt pour expédition',st_delivered:'Livré',st_cancelled:'Annulé',st_returned:'Retourné',
+all:'Tous',st_pending:'En attente',st_ready:'Prêt pour livraison',st_shipready:'Prêt pour expédition',st_delivered:'Livré',st_canceled:'Annulé',st_returned:'Retourné',
 search_orders:'Recherche (n° commande, nom, téléphone)',from:'Du',to:'Au',all_sellers:'Tous les vendeurs',reset:'Réinitialiser',
-order_no:'N° commande',date:'Date',status:'Statut',customer:'Nom du client',phone:'Téléphone',city:'Ville',seller:'Vendeur',note:'Note client',total:'Total',
+order_no:'N° commande',date:'Date',status:'Statut',customer:'Nom du client',phone:'Téléphone',city:'Ville',seller:'Vendeur',note:'Note client',address:'Adresse',name_fr:'Nom (français)',name_ar:'Nom (arabe)',total:'Total',
 net_total:"Chiffre d'affaires hors annulées et retournées",no_data:'Aucune donnée',
 due_month:'Montant dû par le livreur ce mois-ci',delivered_orders:'Commandes livrées',collected:'Montant encaissé auprès des clients',fees:'Frais de livraison retenus',month:'Mois',to_pay:'À reverser',
-payouts_note:"Seules les commandes au statut « Livré » sont comptées. Le mois est celui de la date de commande, et les frais de livraison correspondent au tarif défini dans les paramètres pour chaque commande.",
+payouts_note:"Seules les commandes au statut « Livré » sont comptées. Le mois est celui de la date de commande, et les frais de livraison sont ceux enregistrés sur chaque commande.",
 add_product:'+ Ajouter un nouveau produit',edit_product:'Modifier le produit',search_product:'Rechercher un produit',all_categories:'Toutes les catégories',
 image:'Image',name:'Nom',category:'Catégorie',price:'Prix (DH)',points:'Points',visible:'Visibilité',actions:'Actions',edit:'Modifier',delete:'Supprimer',confirm_delete:'Supprimer ce produit ?',image_url:"URL de l'image",cancel:'Annuler',save:'Enregistrer',
-general:'Paramètres généraux',delivery:'Livraison',delivery_note:'Le prix de livraison est ajouté à chaque commande',whatsapp:'Numéro WhatsApp',connection:'Connexion',connection_val:'Base de données en direct (Supabase)',saved:'Enregistré',
+general:'Paramètres généraux',delivery:'Livraison',delivery_note:'Le prix de livraison est ajouté à chaque commande',connection:'Connexion',connection_val:'Base de données en direct (Supabase)',saved:'Enregistré',
 login:'Connexion',email:'E-mail',password:'Mot de passe',denied:"Ce compte n'est pas administrateur.",
-setup_t:'Configuration requise',setup:"Renseignez SUPABASE_URL et SUPABASE_KEY au début du script du fichier, puis exécutez schema.sql dans Supabase."},
+setup_t:'Configuration requise',setup:"Renseignez SUPABASE_URL et SUPABASE_KEY au début du script du fichier, puis exécutez supabase-setup.sql dans Supabase."},
 ar:{orders:'الطلبات',payouts:'مستحقات شركة الشحن',products:'المنتجات',settings:'الإعدادات',admin_dashboard:'لوحة التحكم',live:'مباشر',back_store:'العودة إلى المتجر',logout:'تسجيل الخروج',
-all:'الكل',st_pending:'قيد الانتظار',st_ready_delivery:'جاهز للتوصيل',st_ready_shipping:'جاهز للشحن',st_delivered:'تم التوصيل',st_cancelled:'ملغي',st_returned:'مسترجع من شركة الشحن',
+all:'الكل',st_pending:'قيد الانتظار',st_ready:'جاهز للتوصيل',st_shipready:'جاهز للشحن',st_delivered:'تم التوصيل',st_canceled:'ملغي',st_returned:'مسترجع من شركة الشحن',
 search_orders:'بحث (رقم الطلب، الاسم، الهاتف)',from:'من',to:'إلى',all_sellers:'كل البائعين',reset:'إعادة ضبط',
-order_no:'رقم الطلب',date:'التاريخ',status:'الحالة',customer:'اسم الزبون',phone:'الهاتف',city:'المدينة',seller:'البائع',note:'ملاحظة الزبون',total:'المجموع',
+order_no:'رقم الطلب',date:'التاريخ',status:'الحالة',customer:'اسم الزبون',phone:'الهاتف',city:'المدينة',seller:'البائع',note:'ملاحظة الزبون',address:'العنوان',name_fr:'الاسم (فرنسي)',name_ar:'الاسم (عربي)',total:'المجموع',
 net_total:'رقم المعاملات دون الملغاة والمسترجعة',no_data:'لا توجد بيانات',
 due_month:'المبلغ المستحق من شركة الشحن هذا الشهر',delivered_orders:'الطلبات المسلّمة',collected:'المبلغ المحصل من الزبناء',fees:'رسوم التوصيل المقتطعة',month:'الشهر',to_pay:'المبلغ المستحق',
-payouts_note:'تُحتسب فقط الطلبات بحالة «تم التوصيل». الشهر هو شهر تاريخ الطلب، ورسوم التوصيل هي القيمة المحددة في الإعدادات لكل طلب.',
+payouts_note:'تُحتسب فقط الطلبات بحالة «تم التوصيل». الشهر هو شهر تاريخ الطلب، ورسوم التوصيل هي القيمة المسجلة في كل طلب.',
 add_product:'+ إضافة منتج جديد',edit_product:'تعديل المنتج',search_product:'بحث عن منتج',all_categories:'كل الفئات',
 image:'الصورة',name:'الاسم',category:'الفئة',price:'السعر (د.م.)',points:'النقاط',visible:'الظهور',actions:'إجراءات',edit:'تعديل',delete:'حذف',confirm_delete:'هل تريد حذف هذا المنتج؟',image_url:'رابط الصورة',cancel:'إلغاء',save:'حفظ',
-general:'الإعدادات العامة',delivery:'التوصيل',delivery_note:'ثمن التوصيل يضاف إلى كل طلب',whatsapp:'رقم واتساب',connection:'الاتصال',connection_val:'قاعدة بيانات مباشرة (Supabase)',saved:'تم الحفظ',
+general:'الإعدادات العامة',delivery:'التوصيل',delivery_note:'ثمن التوصيل يضاف إلى كل طلب',connection:'الاتصال',connection_val:'قاعدة بيانات مباشرة (Supabase)',saved:'تم الحفظ',
 login:'تسجيل الدخول',email:'البريد الإلكتروني',password:'كلمة المرور',denied:'هذا الحساب ليس مسؤولًا.',
-setup_t:'الإعداد مطلوب',setup:'أدخل SUPABASE_URL و SUPABASE_KEY في بداية سكريبت الملف، ثم نفّذ schema.sql في Supabase.'}
+setup_t:'الإعداد مطلوب',setup:'أدخل SUPABASE_URL و SUPABASE_KEY في بداية سكريبت الملف، ثم نفّذ supabase-setup.sql في Supabase.'}
 };
-const ST=['pending','ready_delivery','ready_shipping','delivered','cancelled','returned'];
+const ST=['pending','ready','shipready','delivered','canceled','returned'];
 const ADM=document.getElementById('admin');
 const A={user:null,page:'orders',orders:[],products:[],set:{},fee:0,tab:'all',q:'',from:'',to:'',seller:'',pq:'',pcat:'',err:'',menu:false,edit:null,ch:null};
 const ax=k=>AD[lang][k]||k;
@@ -488,10 +487,10 @@ const ico=n=>`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke
 const logoHtml=`<div class="ad-logo"><b>OSAKASHOP</b><small>${AD.ar.admin_dashboard} / ${AD.fr.admin_dashboard}</small></div>`;
 
 // ---- données
-async function isAdmin(email){const {data}=await sb.from('admins').select('email').eq('email',email).maybeSingle();return !!data}
+async function isAdmin(){const {data}=await sb.rpc('is_admin');return data===true}
 async function loadOrders(){const {data,error}=await sb.from('orders').select('*').order('created_at',{ascending:false}).limit(2000);if(error)A.err=error.message;else A.orders=data}
 async function loadProducts(){const {data,error}=await sb.from('products').select('*').order('created_at',{ascending:false});if(error)A.err=error.message;else A.products=data}
-async function loadSettings(){const {data}=await sb.from('settings').select('*').eq('id',1).maybeSingle();A.set=data||{};A.fee=Number(A.set.delivery_fee)||0}
+async function loadSettings(){const {data}=await sb.from('settings').select('*');A.set=parseSettings(data);A.fee=A.set.delivery_fee}
 const loadAll=()=>Promise.all([loadOrders(),loadProducts(),loadSettings()]);
 function subscribe(){
  if(A.ch)return;
@@ -508,7 +507,7 @@ async function openAdmin(){
  if(!localStorage.getItem('os-admin-seen')){localStorage.setItem('os-admin-seen','1');if(lang!=='ar')setLang('ar')} // arabe par défaut à la 1re ouverture
  if(sb&&!A.user){
   const {data:{session}}=await sb.auth.getSession();
-  if(session&&await isAdmin(session.user.email)){A.user=session.user.email;await loadAll();subscribe()}
+  if(session&&await isAdmin()){A.user=session.user.email;await loadAll();subscribe()}
  }
  paintAdmin();
 }
@@ -546,7 +545,7 @@ function paintPage(){
 
 // ---- Commandes
 function pageOrders(){
- const cols=['order_no','date','status','customer','phone','city','seller','note','total'].map(k=>`<th>${ax(k)}</th>`).join('');
+ const cols=['order_no','date','status','customer','phone','city','address','products','seller','note','total'].map(k=>`<th>${ax(k)}</th>`).join('');
  return title('orders')+`<div class="atabs" id="ad-tabs"></div>
  <div class="acard afilt"><label><input class="ain" id="f-q" placeholder="${esc(ax('search_orders'))}" value="${esc(A.q)}"></label>
  <label>${ax('from')}<input type="date" class="ain" id="f-from" value="${A.from}"></label>
@@ -560,9 +559,9 @@ function filteredOrders(){
  const nd=A.q.trim().toLowerCase(),d1=A.from?new Date(A.from+'T00:00:00'):null,d2=A.to?new Date(A.to+'T23:59:59'):null;
  return A.orders.filter(r=>{
   if(A.tab!=='all'&&r.status!==A.tab)return false;
-  if(A.seller&&r.seller_id!==A.seller)return false;
+  if(A.seller&&r.seller!==A.seller)return false;
   const d=new Date(r.created_at);if(d1&&d<d1)return false;if(d2&&d>d2)return false;
-  if(nd&&!`${r.order_number} ${r.customer_name} ${r.phone}`.toLowerCase().includes(nd))return false;
+  if(nd&&!`${r.order_no} ${r.customer_name} ${r.phone}`.toLowerCase().includes(nd))return false;
   return true;
  });
 }
@@ -570,15 +569,15 @@ function paintOrders(){
  const rows=filteredOrders(),cnt=s=>A.orders.filter(r=>r.status===s).length;
  document.getElementById('ad-tabs').innerHTML=`<button class="ab ${A.tab==='all'?'on':''}" data-act="tab" data-id="all">${ax('all')} <span class="cn">${A.orders.length}</span></button>`+
   ST.map(s=>`<button class="ab ${s==='delivered'?'grn':''} ${A.tab===s?'on':''}" data-act="tab" data-id="${s}">${ax('st_'+s)} <span class="cn">${cnt(s)}</span></button>`).join('');
- const sellers=[...new Set(A.orders.map(r=>r.seller_id).filter(Boolean))];
+ const sellers=[...new Set(A.orders.map(r=>r.seller).filter(Boolean))];
  document.getElementById('f-seller').innerHTML=`<option value="">${ax('all_sellers')}</option>`+sellers.map(s=>`<option ${s===A.seller?'selected':''}>${esc(s)}</option>`).join('');
- const net=rows.filter(r=>r.status!=='cancelled'&&r.status!=='returned').reduce((s,r)=>s+Number(r.total_amount),0);
+ const net=rows.filter(r=>r.status!=='canceled'&&r.status!=='returned').reduce((s,r)=>s+Number(r.total),0);
  document.getElementById('ad-net').innerHTML=`${ax('net_total')} : <b>${money(net)}</b>`;
  document.getElementById('ad-tbody').innerHTML=rows.length?rows.map(r=>`<tr>
-  <td><b>#${r.order_number}</b></td><td class="mut">${new Date(r.created_at).toLocaleDateString(loc())}</td>
+  <td><b>${esc(r.order_no)}</b></td><td class="mut">${new Date(r.created_at).toLocaleDateString(loc())}</td>
   <td><select class="stsel st-${r.status}" data-st="${r.id}">${ST.map(s=>`<option value="${s}" ${s===r.status?'selected':''}>${ax('st_'+s)}</option>`).join('')}</select></td>
-  <td>${esc(r.customer_name)}</td><td dir="ltr">${esc(r.phone)}</td><td>${esc(r.city)}</td><td class="mut">${esc(r.seller_id||'—')}</td>
-  <td class="nt">${esc(r.notes||'—')}</td><td><b>${money(r.total_amount)}</b></td></tr>`).join(''):`<tr><td colspan="9" class="mut">${ax('no_data')}</td></tr>`;
+  <td>${esc(r.customer_name)}</td><td dir="ltr">${esc(r.phone)}</td><td>${esc(r.city)}</td><td class="nt">${esc(r.address)}</td><td class="nt">${esc(itemsTxt(r))}</td><td class="mut">${esc(r.seller||'—')}</td>
+  <td class="nt">${esc(r.note||'—')}</td><td><b>${money(r.total)}</b></td></tr>`).join(''):`<tr><td colspan="11" class="mut">${ax('no_data')}</td></tr>`;
 }
 async function setStatus(id,status){
  const r=A.orders.find(o=>String(o.id)===id);if(!r)return;
@@ -590,8 +589,8 @@ async function setStatus(id,status){
 // ---- Reversements du livreur
 function pagePayouts(){
  const m={};
- A.orders.filter(o=>o.status==='delivered').forEach(o=>{const k=o.created_at.slice(0,7);m[k]=m[k]||{key:k,n:0,c:0};m[k].n++;m[k].c+=Number(o.total_amount)});
- const ms=Object.values(m).map(x=>({...x,f:x.n*A.fee,d:x.c-x.n*A.fee})).sort((p,r)=>r.key.localeCompare(p.key));
+ A.orders.filter(o=>o.status==='delivered').forEach(o=>{const k=o.created_at.slice(0,7);m[k]=m[k]||{key:k,n:0,c:0,f:0};m[k].n++;m[k].c+=Number(o.total);m[k].f+=Number(o.delivery)});
+ const ms=Object.values(m).map(x=>({...x,d:x.c-x.f})).sort((p,r)=>r.key.localeCompare(p.key));
  const nk=new Date().toISOString().slice(0,7),cu=ms.find(x=>x.key===nk)||{n:0,c:0,f:0,d:0};
  const lab=k=>new Date(k+'-01T12:00:00').toLocaleDateString(loc(),{month:'long',year:'numeric'});
  return title('payouts')+`<div class="acard abig"><p>${ax('due_month')}</p><div class="bign">${money(cu.d)}</div><small class="mut">${lab(nk)}</small></div>
@@ -610,28 +609,29 @@ function pageProducts(){
 }
 function paintProducts(){
  const cats=[...new Set(A.products.map(p=>p.category).filter(Boolean))];
- document.getElementById('p-cat').innerHTML=`<option value="">${ax('all_categories')}</option>`+cats.map(c=>`<option ${c===A.pcat?'selected':''}>${esc(c)}</option>`).join('');
- const rows=A.products.filter(p=>(!A.pcat||p.category===A.pcat)&&p.name.toLowerCase().includes(A.pq.toLowerCase()));
+ document.getElementById('p-cat').innerHTML=`<option value="">${ax('all_categories')}</option>`+cats.map(c=>`<option value="${esc(c)}" ${c===A.pcat?'selected':''}>${esc(catLabel(c))}</option>`).join('');
+ const rows=A.products.filter(p=>(!A.pcat||p.category===A.pcat)&&(p.name_fr+' '+p.name_ar).toLowerCase().includes(A.pq.toLowerCase()));
  document.getElementById('p-body').innerHTML=rows.length?rows.map(p=>`<tr>
   <td>${p.image_url?`<img class="pimg" src="${esc(p.image_url)}" alt="">`:'<div class="pimg"></div>'}</td>
-  <td><b>${esc(p.name)}</b></td><td class="mut">${esc(p.category||'—')}</td><td>${money(p.price)}</td><td>${p.points}</td>
-  <td><button class="sw ${p.is_visible?'on':''}" data-act="toggle" data-id="${p.id}" role="switch" aria-checked="${p.is_visible}"></button></td>
+  <td><b>${esc(lang==='ar'?p.name_ar:p.name_fr)}</b></td><td class="mut">${esc(catLabel(p.category)||'—')}</td><td>${money(p.price)}</td><td>${p.points}</td>
+  <td><button class="sw ${p.visible?'on':''}" data-act="toggle" data-id="${p.id}" role="switch" aria-checked="${p.visible}"></button></td>
   <td><div class="row"><button class="ab" data-act="edit" data-id="${p.id}">${ax('edit')}</button><button class="ab del" data-act="del" data-id="${p.id}">${ax('delete')}</button></div></td></tr>`).join(''):`<tr><td colspan="7" class="mut">${ax('no_data')}</td></tr>`;
 }
 function modal(){
  const e=A.edit;
  return `<div class="amodal" data-act="bg"><form id="ad-prod" class="acard amform"><h2>${e.id?ax('edit_product'):ax('add_product').replace('+ ','')}</h2>
- <label>${ax('name')}<input class="ain" name="name" required value="${esc(e.name)}"></label>
- <label>${ax('category')}<input class="ain" name="category" value="${esc(e.category||'')}"></label>
+ <label>${ax('name_fr')}<input class="ain" name="name_fr" required value="${esc(e.name_fr)}"></label>
+ <label>${ax('name_ar')}<input class="ain" name="name_ar" required dir="rtl" value="${esc(e.name_ar)}"></label>
+ <label>${ax('category')}<select class="ain" name="category">${Object.keys(CL.fr).map(c=>`<option value="${c}" ${c===e.category?'selected':''}>${catLabel(c)}</option>`).join('')}</select></label>
  <div class="two"><label>${ax('price')}<input class="ain" name="price" type="number" step="any" min="0" value="${e.price}"></label>
  <label>${ax('points')}<input class="ain" name="points" type="number" min="0" value="${e.points}"></label></div>
  <label>${ax('image_url')}<input class="ain" name="image_url" dir="ltr" value="${esc(e.image_url||'')}"></label>
- <label class="chk"><input type="checkbox" name="is_visible" ${e.is_visible?'checked':''}> ${ax('visible')}</label>
+ <label class="chk"><input type="checkbox" name="visible" ${e.visible?'checked':''}> ${ax('visible')}</label>
  <div class="row end"><button type="button" class="ab" data-act="close">${ax('cancel')}</button><button class="ab pri">${ax('save')}</button></div></form></div>`;
 }
 async function saveProduct(f){
  const d=Object.fromEntries(new FormData(f));
- const row={name:d.name.trim(),category:(d.category||'').trim()||null,price:Number(d.price)||0,points:parseInt(d.points,10)||0,image_url:(d.image_url||'').trim()||null,is_visible:!!d.is_visible};
+ const row={name_fr:d.name_fr.trim(),name_ar:d.name_ar.trim(),category:d.category||'accessories',price:Number(d.price)||0,points:parseInt(d.points,10)||0,image_url:(d.image_url||'').trim()||null,visible:!!d.visible};
  const {error}=A.edit.id?await sb.from('products').update(row).eq('id',A.edit.id):await sb.from('products').insert(row);
  if(error){A.err=error.message;A.edit=null;return paintAdmin()}
  A.edit=null;A.err='';await loadProducts();paintAdmin();loadStore();
@@ -642,17 +642,16 @@ function pageSettings(){
  const s=A.set||{};
  return title('settings')+`<form id="ad-set" class="acard aform"><h2>${ax('general')}</h2>
  <label>${ax('delivery')}<input class="ain" name="delivery_fee" type="number" min="0" step="any" placeholder="25" value="${s.delivery_fee==null?'':s.delivery_fee}"><small>${ax('delivery_note')}</small></label>
- <label>${ax('whatsapp')}<input class="ain" name="whatsapp_number" type="tel" dir="ltr" placeholder="+212 6 00 00 00 00" value="${esc(s.whatsapp_number||'')}"></label>
  <div class="row"><button class="ab pri">${ax('save')}</button><span class="gr" id="set-msg"></span></div></form>
  <div class="acard aconn"><i></i><span class="mut">${ax('connection')} :</span> <b>${ax('connection_val')}</b></div>`;
 }
 async function saveSettings(f){
  const d=Object.fromEntries(new FormData(f));
- const row={id:1,delivery_fee:Number(d.delivery_fee)||0,whatsapp_number:(d.whatsapp_number||'').trim()};
- const {error}=await sb.from('settings').upsert(row);
+ const fee=Number(d.delivery_fee)||0;
+ const {error}=await sb.from('settings').upsert({key:'delivery_price',value:fee});
  const m=document.getElementById('set-msg');
  if(error){m.className='aerr';m.textContent=error.message;return}
- A.set=row;A.fee=row.delivery_fee;settings=row;applyStoreSettings();
+ A.set={delivery_fee:fee};A.fee=fee;settings=A.set;applyStoreSettings();
  m.className='gr';m.textContent=ax('saved');setTimeout(()=>{m.textContent=''},2500);
 }
 
@@ -668,13 +667,13 @@ ADM.addEventListener('click',async e=>{
   case 'tab':A.tab=id;paintOrders();break;
   case 'reset':A.q=A.from=A.to=A.seller='';A.tab='all';paintPage();break;
   case 'logout':await sb.auth.signOut();A.user=null;A.err='';paintAdmin();break;
-  case 'add':A.edit={name:'',category:'',price:0,points:0,image_url:'',is_visible:true};paintAdmin();break;
+  case 'add':A.edit={name_fr:'',name_ar:'',category:'accessories',price:0,points:0,image_url:'',visible:true};paintAdmin();break;
   case 'edit':A.edit={...A.products.find(p=>String(p.id)===id)};paintAdmin();break;
   case 'bg':case 'close':A.edit=null;paintAdmin();break;
   case 'toggle':{
    const p=A.products.find(x=>String(x.id)===id);if(!p)break;
-   p.is_visible=!p.is_visible;paintProducts();
-   const {error}=await sb.from('products').update({is_visible:p.is_visible}).eq('id',p.id);
+   p.visible=!p.visible;paintProducts();
+   const {error}=await sb.from('products').update({visible:p.visible}).eq('id',p.id);
    if(error){A.err=error.message;await loadProducts();paintPage()}else loadStore();
    break;}
   case 'del':{
@@ -690,7 +689,7 @@ ADM.addEventListener('submit',async e=>{
   const d=Object.fromEntries(new FormData(f));A.err='';
   const {data,error}=await sb.auth.signInWithPassword({email:d.email,password:d.password});
   if(error){A.err=error.message;return paintAdmin()}
-  if(!await isAdmin(data.user.email)){await sb.auth.signOut();A.err=ax('denied');return paintAdmin()}
+  if(!await isAdmin()){await sb.auth.signOut();A.err=ax('denied');return paintAdmin()}
   A.user=data.user.email;await loadAll();subscribe();paintAdmin();
  }
  if(f.id==='ad-prod')saveProduct(f);
