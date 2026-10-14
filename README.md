@@ -1,0 +1,1 @@
+# osakashop.1
