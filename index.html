@@ -58,11 +58,18 @@ nav a{color:var(--mut);transition:color .2s}nav a:hover{color:var(--cream)}
 .cats button{background:none;border:1px solid var(--line);color:var(--mut);padding:8px 16px;border-radius:2px;font:600 .88rem var(--body);cursor:pointer;transition:all .2s}
 .cats button[aria-pressed=true]{background:var(--cream);color:var(--bg);border-color:var(--cream)}
 .cats button:hover{border-color:var(--gold)}
-.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:18px}
+.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
 .p{background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
 .p:hover{border-color:var(--gold);transform:translateY(-4px)}
-.p .img{height:170px;display:grid;place-items:center;background:radial-gradient(circle at 70% 30%,#2a1614,#181818 65%);border-bottom:1px solid var(--line)}
-.p .img svg{width:120px;height:120px}
+.p{overflow:hidden}
+.p .img{position:relative;aspect-ratio:1/1;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 70% 30%,#2a1614,#181818 65%);border-bottom:1px solid var(--line)}
+.p .img svg{width:46%;height:46%}
+.p .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.p:hover .img img{transform:scale(1.05)}
+.p .img::after{content:"";position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(to top,rgba(10,10,10,.78),transparent);pointer-events:none}
+.tag{position:absolute;z-index:2;inset-inline-start:12px;bottom:12px;background:var(--red);color:#fff;padding:5px 14px 6px;border-radius:2px;font:800 1.25rem/1.2 var(--disp);box-shadow:0 6px 18px rgba(0,0,0,.45);letter-spacing:.01em}
+.tag small{font:700 .72rem var(--body);opacity:.9;margin-inline-start:3px}
+.btn.block{display:block;width:100%;text-align:center;margin-top:12px;padding:11px 16px}
 .p .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
 .p h3{font-size:1.1rem}.p small{color:var(--mut);font-size:.85rem;flex:1}
 .pr{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
@@ -366,9 +373,8 @@ function renderCats(){
 }
 function renderProds(){
  $('#prods').innerHTML=catalog().filter(p=>!cat||p.cat===cat).map(p=>`
- <article class="p"><div class="img">${p.img?`<img src="${esc(p.img)}" alt="" style="width:100%;height:100%;object-fit:cover">`:`<svg viewBox="0 0 120 120" aria-hidden="true">${ICONS[p.icon]}</svg>`}</div>
- <div class="body"><h3>${esc(p.name)}</h3><small>${esc(p.desc)}</small>
- <div class="pr"><span class="price">${fmt(p.price)} <small>DH</small></span><button class="btn" data-add="${esc(p.id)}">${t('order')}</button></div></div></article>`).join('');
+ <article class="p"><div class="img">${p.img?`<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy">`:`<svg viewBox="0 0 120 120" aria-hidden="true">${ICONS[p.icon]}</svg>`}<span class="tag">${fmt(p.price)} <small>DH</small></span></div>
+ <div class="body"><h3>${esc(p.name)}</h3>${p.desc?`<small>${esc(p.desc)}</small>`:''}<button class="btn block" data-add="${esc(p.id)}">${t('order')}</button></div></article>`).join('');
 }
 function renderSum(){
  const ids=Object.keys(cart),n=ids.reduce((s,k)=>s+cart[k].q,0);
