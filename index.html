@@ -454,7 +454,7 @@ net_total:"Chiffre d'affaires hors annulées et retournées",no_data:'Aucune don
 due_month:'Montant dû par le livreur ce mois-ci',delivered_orders:'Commandes livrées',collected:'Montant encaissé auprès des clients',fees:'Frais de livraison retenus',month:'Mois',to_pay:'À reverser',
 payouts_note:"Seules les commandes au statut « Livré » sont comptées. Le mois est celui de la date de commande, et les frais de livraison sont ceux enregistrés sur chaque commande.",
 add_product:'+ Ajouter un nouveau produit',edit_product:'Modifier le produit',search_product:'Rechercher un produit',all_categories:'Toutes les catégories',
-image:'Image',name:'Nom',category:'Catégorie',price:'Prix (DH)',points:'Points',visible:'Visibilité',actions:'Actions',edit:'Modifier',delete:'Supprimer',confirm_delete:'Supprimer ce produit ?',image_url:"URL de l'image",cancel:'Annuler',save:'Enregistrer',
+image:'Image',name:'Nom',category:'Catégorie',price:'Prix (DH)',points:'Points',visible:'Visibilité',actions:'Actions',edit:'Modifier',delete:'Supprimer',confirm_delete:'Supprimer ce produit ?',image_url:"URL de l'image",choose_image:'Choisir une image',change_image:'Changer l\'image',uploading:'Envoi en cours…',up_fail:'Échec de l\'envoi : ',up_big:'Image trop lourde (5 Mo max).',up_type:'Choisissez un fichier image.',cancel:'Annuler',save:'Enregistrer',
 general:'Paramètres généraux',delivery:'Livraison',delivery_note:'Le prix de livraison est ajouté à chaque commande',connection:'Connexion',connection_val:'Base de données en direct (Supabase)',saved:'Enregistré',
 login:'Connexion',email:'E-mail',password:'Mot de passe',denied:"Ce compte n'est pas administrateur.",
 setup_t:'Configuration requise',setup:"Renseignez SUPABASE_URL et SUPABASE_KEY au début du script du fichier, puis exécutez supabase-setup.sql dans Supabase."},
@@ -466,7 +466,7 @@ net_total:'رقم المعاملات دون الملغاة والمسترجعة'
 due_month:'المبلغ المستحق من شركة الشحن هذا الشهر',delivered_orders:'الطلبات المسلّمة',collected:'المبلغ المحصل من الزبناء',fees:'رسوم التوصيل المقتطعة',month:'الشهر',to_pay:'المبلغ المستحق',
 payouts_note:'تُحتسب فقط الطلبات بحالة «تم التوصيل». الشهر هو شهر تاريخ الطلب، ورسوم التوصيل هي القيمة المسجلة في كل طلب.',
 add_product:'+ إضافة منتج جديد',edit_product:'تعديل المنتج',search_product:'بحث عن منتج',all_categories:'كل الفئات',
-image:'الصورة',name:'الاسم',category:'الفئة',price:'السعر (د.م.)',points:'النقاط',visible:'الظهور',actions:'إجراءات',edit:'تعديل',delete:'حذف',confirm_delete:'هل تريد حذف هذا المنتج؟',image_url:'رابط الصورة',cancel:'إلغاء',save:'حفظ',
+image:'الصورة',name:'الاسم',category:'الفئة',price:'السعر (د.م.)',points:'النقاط',visible:'الظهور',actions:'إجراءات',edit:'تعديل',delete:'حذف',confirm_delete:'هل تريد حذف هذا المنتج؟',image_url:'رابط الصورة',choose_image:'اختيار صورة',change_image:'تغيير الصورة',uploading:'جارٍ الرفع…',up_fail:'فشل الرفع: ',up_big:'الصورة كبيرة جدًا (5 ميغابايت كحد أقصى).',up_type:'اختر ملف صورة.',cancel:'إلغاء',save:'حفظ',
 general:'الإعدادات العامة',delivery:'التوصيل',delivery_note:'ثمن التوصيل يضاف إلى كل طلب',connection:'الاتصال',connection_val:'قاعدة بيانات مباشرة (Supabase)',saved:'تم الحفظ',
 login:'تسجيل الدخول',email:'البريد الإلكتروني',password:'كلمة المرور',denied:'هذا الحساب ليس مسؤولًا.',
 setup_t:'الإعداد مطلوب',setup:'أدخل SUPABASE_URL و SUPABASE_KEY في بداية سكريبت الملف، ثم نفّذ supabase-setup.sql في Supabase.'}
@@ -623,11 +623,32 @@ function modal(){
  <label>${ax('category')}<select class="ain" name="category">${Object.keys(CL.fr).map(c=>`<option value="${c}" ${c===e.category?'selected':''}>${catLabel(c)}</option>`).join('')}</select></label>
  <div class="two"><label>${ax('price')}<input class="ain" name="price" type="number" step="any" min="0" value="${e.price}"></label>
  <label>${ax('points')}<input class="ain" name="points" type="number" min="0" value="${e.points}"></label></div>
- <label>${ax('image_url')}<input class="ain" name="image_url" dir="ltr" value="${esc(e.image_url||'')}"></label>
+ <div><label>${ax('image')}</label><div class="row" style="margin-top:6px;gap:14px">
+  <div class="pimg" id="p-prev" style="width:84px;height:84px;flex:none;overflow:hidden">${e.image_url?`<img src="${esc(e.image_url)}" alt="" style="width:100%;height:100%;object-fit:cover">`:''}</div>
+  <div><button type="button" class="ab" data-act="pick">${ax(e.image_url?'change_image':'choose_image')}</button><input type="file" id="p-file" accept="image/*" hidden><div class="mut" id="p-imsg" style="margin-top:6px;font-size:.8rem"></div></div></div>
+  <input type="hidden" name="image_url" value="${esc(e.image_url||'')}"></div>
  <label class="chk"><input type="checkbox" name="visible" ${e.visible?'checked':''}> ${ax('visible')}</label>
  <div class="row end"><button type="button" class="ab" data-act="close">${ax('cancel')}</button><button class="ab pri">${ax('save')}</button></div></form></div>`;
 }
+async function uploadImg(file){
+ const msg=document.getElementById('p-imsg');if(!file||!msg)return;
+ if(!file.type.startsWith('image/')){msg.textContent=ax('up_type');return}
+ if(file.size>5*1024*1024){msg.textContent=ax('up_big');return}
+ A.up=true;msg.textContent=ax('uploading');
+ const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,5)||'jpg';
+ const path=`${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
+ const {error}=await sb.storage.from('product-images').upload(path,file,{contentType:file.type,cacheControl:'3600'});
+ A.up=false;
+ if(error){msg.textContent=ax('up_fail')+error.message;return}
+ const url=sb.storage.from('product-images').getPublicUrl(path).data.publicUrl;
+ A.edit.image_url=url;
+ const h=document.querySelector('#ad-prod [name=image_url]');if(h)h.value=url;
+ document.getElementById('p-prev').innerHTML=`<img src="${esc(url)}" alt="" style="width:100%;height:100%;object-fit:cover">`;
+ msg.textContent='';
+ const pb=document.querySelector('#ad-prod [data-act=pick]');if(pb)pb.textContent=ax('change_image');
+}
 async function saveProduct(f){
+ if(A.up)return;
  const d=Object.fromEntries(new FormData(f));
  const row={name_fr:d.name_fr.trim(),name_ar:d.name_ar.trim(),category:d.category||'accessories',price:Number(d.price)||0,points:parseInt(d.points,10)||0,image_url:(d.image_url||'').trim()||null,visible:!!d.visible};
  const {error}=A.edit.id?await sb.from('products').update(row).eq('id',A.edit.id):await sb.from('products').insert(row);
@@ -667,6 +688,7 @@ ADM.addEventListener('click',async e=>{
   case 'logout':await sb.auth.signOut();A.user=null;A.err='';paintAdmin();break;
   case 'add':A.edit={name_fr:'',name_ar:'',category:'accessories',price:0,points:0,image_url:'',visible:true};paintAdmin();break;
   case 'edit':A.edit={...A.products.find(p=>String(p.id)===id)};paintAdmin();break;
+  case 'pick':document.getElementById('p-file').click();break;
   case 'bg':case 'close':A.edit=null;paintAdmin();break;
   case 'toggle':{
    const p=A.products.find(x=>String(x.id)===id);if(!p)break;
@@ -695,6 +717,7 @@ ADM.addEventListener('submit',async e=>{
 });
 const onFilter=e=>{
  const i=e.target.id;
+ if(i==='p-file'){if(e.type==='change')uploadImg(e.target.files[0]);return}
  if(i==='f-q')A.q=e.target.value;else if(i==='f-from')A.from=e.target.value;else if(i==='f-to')A.to=e.target.value;else if(i==='f-seller')A.seller=e.target.value;
  else if(i==='p-q')A.pq=e.target.value;else if(i==='p-cat')A.pcat=e.target.value;
  else if(e.target.dataset.st)return setStatus(e.target.dataset.st,e.target.value);
