@@ -348,7 +348,6 @@ Object.assign(T.fr,{deliv:'Livraison',ok_saved:"Commande enregistrée. Numéro :
 Object.assign(T.ar,{deliv:'التوصيل',ok_saved:'تم تسجيل الطلب. رقم الطلب:',e_save:'تعذر التسجيل. أعد المحاولة بعد قليل.',e_cart:'أضف منتجًا واحدًا على الأقل إلى السلة قبل إرسال الطلب.'});
 
 // ===================== BOUTIQUE =====================
-const DEMO=[{c:1,i:1,n:1450},{c:1,i:2,n:690},{c:2,i:3,n:380},{c:2,i:5,n:150},{c:3,i:4,n:950},{c:3,i:4,n:720},{c:4,i:5,n:110},{c:4,i:5,n:95}];
 let DB=null,settings={},lang=localStorage.getItem('os-lang')||'fr',cat='',cart={};
 const CL={fr:{clippers:'Tondeuses pro',razors:'Rasoirs et lames',scissors:'Ciseaux de coupe',care:'Produits barbe',hygiene:'Hygiène',accessories:'Accessoires'},
  ar:{clippers:'ماكينات احترافية',razors:'مواسي وشفرات',scissors:'مقصات القص',care:'منتجات اللحية',hygiene:'النظافة والتعقيم',accessories:'إكسسوارات'}};
@@ -359,8 +358,7 @@ const itemsTxt=r=>(Array.isArray(r.items)?r.items:[]).map(i=>`${i.qty}× ${(lang
 
 // Produits : base Supabase s'il y en a (sinon les 8 produits de démonstration)
 function catalog(){
- if(DB&&DB.length)return DB.map(r=>({id:String(r.id),name:lang==='ar'?(r.name_ar||r.name_fr):(r.name_fr||r.name_ar),desc:'',price:Number(r.price),img:r.image_url,cat:r.category||'',icon:1}));
- return DEMO.map((p,x)=>({id:'d'+x,name:t('p'+(x+1)),desc:t('p'+(x+1)+'d'),price:p.n,img:null,cat:DC[p.c],icon:p.i}));
+ return (DB||[]).map(r=>({id:String(r.id),name:lang==='ar'?(r.name_ar||r.name_fr):(r.name_fr||r.name_ar),desc:'',price:Number(r.price),img:r.image_url,cat:r.category||'',icon:1}));
 }
 function renderCats(){
  const cs=[...new Set(catalog().map(p=>p.cat).filter(Boolean))];
